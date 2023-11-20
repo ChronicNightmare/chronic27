@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+	<title>My HTML Resume</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+			<style> /*background | text format | gradiant*/
+			body {
+            margin: 0;
+			font-family: Menlo, monospace;
+			background-color:#000000;
+			text-color: white;
+			}
+			
+			.bg-image {
+			background-image: url("img/arknight_wallpa.jpg");
+			height: 1080px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			}
+			
+			.bg-text {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			}
+			
+			/* Add a class for the transparent button */
+			.transparent-btn {
+			  background-color: transparent;
+			  border: 1px solid white;
+			  color: white;
+			  transition: background-color 0.3s;
+			}
+
+			/* Change background color of the button on hover */
+			.transparent-btn:hover {
+			  background-color: black; /* Set the desired hover color */
+			  color: white; /* Set the text color on hover */
+			}
+	
+			#gradient {
+			  height: 95px;
+			 background-color:#4c4c4c;
+			  background-image:(#4c4c4c);
+			}	
+			#gradient1 {
+			  height: 350px;
+			  background-color:#1b4885;
+			  background-image:(#1b4885);
+			}
+			#gradient2 {
+			  height: 90px;
+			  background-color:#184077;
+			  background-image:(#1b4885);
+			}
+			</style>
+			
+			<style> /*Navigation*/
+
+			.topnav {
+			  background-color: transparent;
+			  overflow: hidden;
+			  display: flex;
+			  justify-content: center;
+			  position: relative;
+			  top: 50px;
+			}
+
+			.topnav a {
+			  float: left;
+			  display: block;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  font-size: 17px;
+			  font-family: Menlo, monospace;
+			}
+
+			.topnav a:hover {
+			  background-color: #4c4c4c;
+			  color: white;
+			}
+
+			.topnav a.active {
+			  background-color: #4c4c4c;
+			  color: white;
+			}
+
+			.topnav .icon {
+			  display: none;
+			}
+
+/* The subnavigation menu */
+.subnav {
+  float: left;
+  overflow: hidden;
+
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: white;
+  padding: inherit;
+  background-color: transparent; /* Set background color to transparent */
+  font-family: inherit;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add a red background color to navigation links on hover */
+.subnav:hover .subnavbtn {
+  background-color: transparent; /* Set background color to transparent on hover */
+}
+
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #666666;
+  width: 100%;
+  z-index: 1;
+  border: 1px solid white; /* Add this line for a white border */
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #666666;
+  color: white;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+			</style>
+			
+			<style> /*Footer*/
+
+			footer {
+            padding: 0px;
+            color: white;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            background: linear-gradient(#4c4c4c, #191919); /* Linear gradient background */
+            line-height: 1.5;
+            font-family: Menlo, monospace;
+        }
+
+        #footer {
+            color: white;
+        }
+
+        #about {
+            font-family: Menlo, monospace;
+        }
+
+        #link {
+            color: #002a38;
+        }
+			</style>
+	
+			<style> /*Button*/
+    /* ... (your existing styles) ... */
+
+    /* Style for the submit button */
+    input[type="submit"] {
+        background-color: #4b88de;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Hover effect for the submit button */
+    input[type="submit"]:hover {
+        background-color: #315A91;
+    }
+</style>
+
+	
+	</head>
+<body>
+<script>	<!-- Contact footer -->
+    document.addEventListener("DOMContentLoaded", function() {
+        const submitButton = document.getElementById("submitButton");
+        const confirmationMessage = document.getElementById("confirmationMessage");
+
+        submitButton.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent the form from submitting (you may also use AJAX to submit the form data)
+            
+            // Set the confirmation message
+            confirmationMessage.textContent = "Your feedback has been. Thank you for your feedback and have a good day!";
+        });
+    });
+</script>
+				
+<script>	<!-- Sub navtica -->
+    document.addEventListener("DOMContentLoaded", function() {
+      var interestLink = document.getElementById("interestLink");
+      var subnavContent = document.querySelector(".subnav-content");
+
+      // Toggle sub-menu visibility
+      interestLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        subnavContent.style.display = (subnavContent.style.display === "flex") ? "none" : "flex";
+      });
+
+      // Hide sub-menu when clicking outside
+      document.addEventListener("click", function(e) {
+        if (!interestLink.contains(e.target) && !subnavContent.contains(e.target)) {
+          subnavContent.style.display = "none";
+        }
+      });
+
+      // Handle sub-menu item clicks
+      subnavContent.addEventListener("click", function() {
+        subnavContent.style.display = "none";
+      });
+    });
+  </script>
+
+
+<div class="bg-image">
+<div class="topnav" id="myTopnav">
+		<a href="home.html" class="nav-link">&emsp;&emsp; Home &emsp;&emsp;</a>
+		<a href="profile.html#skill" >&emsp;&emsp; Profile &emsp;&emsp;</a>
+			<div class="subnav active">
+			<button class="subnavbtn"><a href="#" id="interestLink" class="nav-link">&emsp;&emsp; Interest &#x25BC &emsp;&emsp;<i class="fa fa-caret-down"></i></a>
+				<div class="subnav-content">
+				<a href="interestg.html#games" class="nav-link"><h5>&emsp;&emsp; Games &emsp;&emsp;</h5></a>
+				<br>&emsp;</br>
+				<a href="interestm.html#movies" class="nav-link"><h5>&emsp;&emsp; Movies &emsp;&emsp;</h5></a>
+				</div>
+			</div>
+		<a href="settle.html" class="nav-link">&emsp;&emsp; Settle &emsp;&emsp;</a>
+		<a href="about.html" class="nav-link">&emsp;&emsp; About &emsp;&emsp;</a>
+		</div>
+    <div class="bg-text">
+        <h1 style="font-size:35px">EMILIO RAMON T. OLIVAR</h1>
+        <h3><em>GAME DEVELOPER</em></h3>
+        <h3><em>2 Corinthians 6:8 NLT</em></h3>
+        <a href="about.html" class="btn btn-primary transparent-btn">Do you want to know more?</a>
+    </div>
+</div>
+		
+		<div id="gradient" >
+		<br>
+		<p style="font-size:30px" align="center" id="about">... <em><b> CONTACTS</b></em> ...</p>
+<footer>
+<form action="" method="post" >
+<br><br>
+  <label for="Username" style="color:white;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Fullname&emsp;&emsp;&emsp;&emsp;(Optional): </label>&nbsp;&nbsp;
+  <input type="text" id="username" name="username" required style="width: 300px"><br><br>
+  
+  <label for="phone" style="color:white;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Phonenumber (Optional): </label>&nbsp;&nbsp;
+  <input type="number" id="phone" name="phone" required style="width: 300px"><br><br>
+  
+  <label for="email" style="color:white;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Email Address: </label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+  <input type="email" id="email" name="email" required style="width: 300px"><br><br>
+  
+  <label for="rating" style="color: white;">
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;On a scale of 1 to 5, how do you feel about the website?
+</label><br>
+
+<div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <input type="checkbox" id="rating1" name="rating" value="1">
+    <label for="rating1" style="color: white;">1</label>
+	&emsp;&emsp;
+    <input type="checkbox" id="rating2" name="rating" value="2">
+    <label for="rating2" style="color: white;">2</label>
+	&emsp;&emsp;
+    <input type="checkbox" id="rating3" name="rating" value="3">
+    <label for="rating3" style="color: white;">3</label>
+	&emsp;&emsp;
+    <input type="checkbox" id="rating4" name="rating" value="4">
+    <label for="rating4" style="color: white;">4</label>
+	&emsp;&emsp;
+    <input type="checkbox" id="rating5" name="rating" value="5">
+    <label for="rating5" style="color: white;">5</label>
+</div>
+  <br>
+  <br>
+  <label for="message" style="color:white;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &#x25BC;&emsp;&#x25BC Type your suggestion and comment on the message box &#x25BC;&emsp;&#x25BC </label><br>
+  <br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<textarea id="message" name="message" rows="5" cols="100"></textarea><br><br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input class="btn btn-primary" type="submit" value="Submit" id="submitButton"> 
+																<span id="confirmationMessage"></span>
+  <br><br><br><br><br><br><br><br>
+  <br>
+</form> 
+</footer>
+		</div>
+</body>
